@@ -1,0 +1,110 @@
+\documentclass[a5paper,twoside,russian,8pt]{article}
+\usepackage[intlimits]{amsmath}
+\usepackage{amsthm,amsfonts}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage[final]{graphicx,epsfig}
+\usepackage{indentfirst}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english]{babel}
+\usepackage[usenames]{color}
+\usepackage{hyperref}
+\usepackage{wasysym}
+\usepackage{enumitem}
+\RequirePackage{enumitem}
+\renewcommand{\alph}[1]{\asbuk{#1}}
+\setenumerate[1]{label=\alph*), fullwidth, itemindent=\parindent, listparindent=\parindent} 
+\setenumerate[2]{label=\arabic*), fullwidth, itemindent=\parindent, listparindent=\parindent, leftmargin=\parindent}
+\usepackage{mathtools}
+
+\hoffset=-10.4mm \voffset=-12.4mm \oddsidemargin=5mm \evensidemargin=0mm \topmargin=0mm \headheight=0mm \headsep=0mm
+\textheight=174mm \textwidth=113mm
+
+\newcommand{\bfv}{\mathbf}
+
+\def \e {\varepsilon}
+
+\def \ZZ {\mathbb Z}
+\def \FF {\mathbb F}
+\def  \R {\mathbb R}
+\def \QQ {\mathbb Q}
+\def \NN {\mathbb N}
+\def \PP {\mathbb P}
+\def \EE {\mathbb E}
+\def \DD {\mathbb D}
+\def \CC {\mathbb C}
+\def \II {\mathbb I}
+
+
+\def\Ss{\mathcal{S}^n} 
+\def\Pp{\mathcal{P}^{n}}
+\def\cA{{\cal A}}
+\def\cB{{\cal B}}
+\def\cD{{\cal D}}
+\def\cC{{\cal C}}
+\def\cQ{{\cal Q}}
+%\def\R{{\cal R}}
+\def\cM{{\cal M}}
+\def\cN{{\cal N}}
+\def\cT{{\cal T}}
+\def\cP{{\cal P}}
+\def\cF{{\cal F}}
+\newcommand{\St}{\mathbb{S}}
+\def\la{\langle}
+\def\ra{\rangle}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\dom}{dom}
+
+\newcommand{\Tr}{\operatorname{Tr}}
+% Блочная матрица
+
+\renewcommand{\Re}{\mathrm{Re}\,}
+\renewcommand{\Im}{\mathrm{Im}\,}
+\def\<{\langle}
+\def\>{\rangle}
+
+
+
+
+\begin{document}
+\selectlanguage{russian}
+\begin{center}
+    \textbf{Домашнее задание 7, субдифференциал и субградиент}
+\end{center}
+\begin{center}
+    \textbf{Deadline - 01.11.2024 в 23:59}
+\end{center}
+
+
+\section*{Основная часть}
+\begin{enumerate}[label=\textbf{Задача \arabic*.}]
+    \item (1 балл) Пусть функция $f:\mathbb{R} \to \mathbb{R}$ задана следующим образом $f(x) = \max\{-x, x, x^2\}$. Найдите субдифференциал данной функции $\partial f(x)$.
+    
+    \item (0.5 балла) Найдите $\partial f(x)$, если $f(x) = \text{ReLU}(x) = \max \{0, x\}.$
+    
+    \item (1.5 балла) Пусть $f(x) = \|x\|_\infty$. Докажите, что $$ \partial f(0) = \textbf{conv}\{\pm e_1, \ldots , \pm e_n\}, $$ где $e_i$ это $i$-тый вектор канонического базиса (т.е. столбец единичной матрицы).
+    
+    \item (1 балл) Пусть функция $f:\mathbb{R} \to \mathbb{R}$ задана следующим образом $f(x) = | x - 2| + |x + 2| + |x - 1|$. Найдите субдифференциал данной функции $\partial f(x)$.
+    
+    \item (1 балл) Пусть функция $f: \mathbb{R}^n \to \mathbb{R}$ задана следующим образом $f(x) = \exp\left(\|Ax - b\|_p\right)$, где $A \in \mathbb{R}^{m \times n}$, $b \in \mathbb{R}^m$, $p \in [1; +\infty]$. Найдите субдифференциал $\partial f(x)$.
+\end{enumerate}
+
+\section*{Дополнительная часть}
+\begin{enumerate}[label=\textbf{Задача \arabic*.}]
+    \item (1 балл) Пусть $f: \mathbb{R}^n \to \mathbb{R}$ есть индикаторная функция следующего множества $$\mathcal{B}_{\|\cdot\|}(0, 1) = \left\{x : \| x\|_p \leq 1\right\},$$
+    где $p \in [1; +\infty]$. Найдите субдифференциал $\partial f(x)$. 
+    
+    \item (1.5 балла) Пусть $f: S \to \mathbb{R}$ - функция, определенная на множестве $S$ из Евклидова пространства $E$. Пусть $x_0 \in S$ и пусть $f^*: S_{*} \to \mathbb{R}$ - сопряженная функция, где $S_*$ из сопряженного пространства $E^*$. Покажите,что $$\partial f(x) = \left\{g \in S_{*} : \langle g, x\rangle = f^*(g) + f(x)\right\}$$
+    
+    \item (1 балл) Пусть $\lambda_{\max}: \mathbb{S}^d \to \mathbb{R}$ - функция максимального собственного значения, заданная на $\mathbb{S}^d$. Найдите субдифференциал $\partial \lambda_{\max}(X)$. Здесь $\mathbb{S}^d$ - симметричные матрицы.
+    
+    Указание: воспользуйтесь вариационным представлением $\lambda_{\max}$ и формулой для субдифференциала максимума.
+    
+    \item (1.5 балла) Покажите, что функция $\lambda_{\max}(X)$ дифференцируема в точке $X \in \mathbb{S}^d$ тогда и только тогда, когда максимальное собственное значение матрицы $X$ является простым (т. е. имеет кратность 1). Чему равен градиент $\nabla \lambda_{\max}(X)$?
+\end{enumerate}
+
+
+\end{document}

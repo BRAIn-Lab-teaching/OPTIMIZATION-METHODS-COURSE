@@ -1,0 +1,138 @@
+\documentclass[a5paper,twoside,russian,8pt]{article}
+\usepackage[intlimits]{amsmath}
+\usepackage{amsthm,amsfonts}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage[final]{graphicx,epsfig}
+\usepackage{indentfirst}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english]{babel}
+\usepackage[usenames]{color}
+\usepackage{hyperref}
+\usepackage{wasysym}
+\usepackage{enumitem}
+\RequirePackage{enumitem}
+\renewcommand{\alph}[1]{\asbuk{#1}}
+\setenumerate[1]{label=\alph*), fullwidth, itemindent=\parindent, listparindent=\parindent} 
+\setenumerate[2]{label=\arabic*), fullwidth, itemindent=\parindent, listparindent=\parindent, leftmargin=\parindent}
+\usepackage{mathtools}
+
+\hoffset=-10.4mm \voffset=-12.4mm \oddsidemargin=5mm \evensidemargin=0mm \topmargin=0mm \headheight=0mm \headsep=0mm
+\textheight=174mm \textwidth=113mm
+
+\newcommand{\bfv}{\mathbf}
+
+\def \e {\varepsilon}
+
+\def \ZZ {\mathbb Z}
+\def \FF {\mathbb F}
+\def  \R {\mathbb R}
+\def \QQ {\mathbb Q}
+\def \NN {\mathbb N}
+\def \PP {\mathbb P}
+\def \EE {\mathbb E}
+\def \DD {\mathbb D}
+\def \CC {\mathbb C}
+\def \II {\mathbb I}
+
+
+\def\Ss{\mathcal{S}^n} 
+\def\Pp{\mathcal{P}^{n}}
+\def\cA{{\cal A}}
+\def\cB{{\cal B}}
+\def\cD{{\cal D}}
+\def\cC{{\cal C}}
+\def\cQ{{\cal Q}}
+%\def\R{{\cal R}}
+\def\cM{{\cal M}}
+\def\cN{{\cal N}}
+\def\cT{{\cal T}}
+\def\cP{{\cal P}}
+\def\cF{{\cal F}}
+\newcommand{\St}{\mathbb{S}}
+\def\la{\langle}
+\def\ra{\rangle}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\dom}{dom}
+
+\newcommand{\Tr}{\operatorname{Tr}}
+% Блочная матрица
+
+\renewcommand{\Re}{\mathrm{Re}\,}
+\renewcommand{\Im}{\mathrm{Im}\,}
+\def\<{\langle}
+\def\>{\rangle}
+
+
+
+
+\begin{document}
+\selectlanguage{russian}
+\begin{center}
+    \textbf{Домашнее задание 7, сопряженные множества и функции}
+\end{center}
+\begin{center}
+    \textbf{Deadline - 01.11.2024 в 23:59}
+\end{center}
+
+\section*{Основная часть}
+\subsection*{Сопряженные множества}
+\begin{enumerate}[label=\textbf{Задача \arabic*.}]
+
+\item Постройте $X^*$, если
+\begin{enumerate}
+
+    \item (0.5 балла) $X = \{x \in \R^2 : x_1^2+(x_2-1)^2 \leq 1\}$
+    \item (0.5 балла) $X = \{x \in \R^2 : x_2\geq \frac{x_1^2}{2}\}$
+    \item (0.5 балла) $X = \{x \in \R^d : \|Ax\| \leq 1, A \in \St^d_{++} \}$
+    
+\end{enumerate}
+
+\item (1 балл) Постройте $X^*$ и $X^{**}$, если 
+
+$X = \left\{x \in \R^d : \sum\limits_{i=1}^d x_i = 1 \right\}$
+
+\subsection*{Сопряженные функции}
+
+\item Постройте $f^{*}(y)$, если
+\begin{enumerate}
+    \item (0.5 балла) $f(x) = \max(|x|, x^2), x\in \R$
+    \item (0.5 балла) $f(x) = (|x| + 1)\ln(|x|+1), x\in \R$
+    \item (0.5 балла) $f(x)=(\|x\|+1)\ln(\|x\|+1)-\|x\|, x\in \R^d$
+    
+\end{enumerate}
+
+\item (1 балл) Постройте $f^*(y)$ и $f^{**}(x)$, если 
+
+$f(x) = \ch x - 1 = \frac{e^x+e^{-x}}{2} - 1, x\in \R$
+
+\end{enumerate}
+
+\section*{Дополнительная часть}
+
+\subsection*{Сопряженные множества}
+\begin{enumerate}[label=\textbf{Задача \arabic*.}]
+    \item (1 балл) Пусть $\Bbb{A}^d$ - множеством антисимметричных матриц, т.е. $X\in \Bbb{A}^d \Leftrightarrow X^T = -X$. Покажите, что $(\Bbb{A}^d)^*=\St^d$.
+    
+    \item Докажите, что $K_p$ и $K_{p_*}$ являются взаимосопряженными, т.е. $(K_p)^* = K_{p_*}$ и $(K_{p_*})^* = K_p$, где $K_p=\{(x,\mu)\in R^{d+1}:\|x\|_p\leq\mu\}$ и 
+        \begin{enumerate}
+            \item (0.75 балла) $1 < p < \infty,\ \frac{1}{p}+\frac{1}{p_*} = 1$
+            \item (0.75 балла) $p=1,\ p_*=\infty$
+        \end{enumerate}
+    
+    \subsection*{Сопряженные функции}
+    
+    \item (0.75 балла)Постройте $f^*(x)$, если $f(x) = \log \left(\sum_{i=1}^d e^{x_i} \right) $, $x\in \R^d$
+    
+    \item Постройте $f^*(x)$, если:
+        \begin{enumerate}
+            \item (0.5 балла) $f(x) = \alpha g(x)$, где $\alpha > 0$
+            \item (0.5 балла) $f(x) = g(Ax)$, где $A\in \St^d_{++}$
+            \item (0.75 балла) $f(x) = \inf\limits_{u+v=x}(g(u)+h(v))$
+        \end{enumerate}
+
+\end{enumerate}
+\end{document}
