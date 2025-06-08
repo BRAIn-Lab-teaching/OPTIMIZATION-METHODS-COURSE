@@ -1,0 +1,156 @@
+\documentclass[a5paper,twoside,russian,8pt]{article}
+\usepackage[intlimits]{amsmath}
+\usepackage{amsthm,amsfonts}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage[final]{graphicx,epsfig}
+\usepackage{indentfirst}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english]{babel}
+\usepackage[usenames]{color}
+\usepackage{hyperref}
+\usepackage{wasysym}
+\usepackage{enumitem}
+\RequirePackage{enumitem}
+\renewcommand{\alph}[1]{\asbuk{#1}}
+\setenumerate[1]{label=\alph*), fullwidth, itemindent=\parindent, listparindent=\parindent} 
+\setenumerate[2]{label=\arabic*), fullwidth, itemindent=\parindent, listparindent=\parindent, leftmargin=\parindent}
+\usepackage{mathtools}
+
+\hoffset=-10.4mm \voffset=-12.4mm \oddsidemargin=5mm \evensidemargin=0mm \topmargin=0mm \headheight=0mm \headsep=0mm
+\textheight=174mm \textwidth=113mm
+
+\newcommand{\bfv}{\mathbf}
+
+\def \e {\varepsilon}
+
+\def \ZZ {\mathbb Z}
+\def \FF {\mathbb F}
+\def  \R {\mathbb R}
+\def \QQ {\mathbb Q}
+\def \NN {\mathbb N}
+\def \PP {\mathbb P}
+\def \EE {\mathbb E}
+\def \DD {\mathbb D}
+\def \CC {\mathbb C}
+\def \II {\mathbb I}
+
+
+\def\Ss{\mathcal{S}^n} 
+\def\Pp{\mathcal{P}^{n}}
+\def\cA{{\cal A}}
+\def\cB{{\cal B}}
+\def\cD{{\cal D}}
+\def\cC{{\cal C}}
+\def\cQ{{\cal Q}}
+%\def\R{{\cal R}}
+\def\cM{{\cal M}}
+\def\cN{{\cal N}}
+\def\cT{{\cal T}}
+\def\cP{{\cal P}}
+\def\cF{{\cal F}}
+\newcommand{\St}{\mathbb{S}}
+\def\la{\langle}
+\def\ra{\rangle}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\dom}{dom}
+
+\newcommand{\Tr}{\operatorname{Tr}}
+% Блочная матрица
+
+\renewcommand{\Re}{\mathrm{Re}\,}
+\renewcommand{\Im}{\mathrm{Im}\,}
+\def\<{\langle}
+\def\>{\rangle}
+
+\begin{document}
+\selectlanguage{russian}
+
+\section{Домашнее задание 1, основная часть}
+
+\begin{center}
+    \textbf{Deadline - 20.09.2024 в 23:59}
+\end{center}
+
+В этой части используется следующие обозначения:
+
+$\mathbb{R}_{++}$ - положительные вещественные числа
+
+$I_n$ - матрица с единицами на диагонали (вне диагонали 0)
+
+$A \in \mathbb{S}^n \quad\Longleftrightarrow \quad A= A^\top$
+
+$A \in \mathbb{S}^n_+ \quad\Longleftrightarrow \quad A \in \mathbb{S}^n ; \quad  \forall x: \quad  x^\top Ax \geq 0$
+
+$A \in \mathbb{S}^n_{++}\quad \Longleftrightarrow \quad A \in \mathbb{S}^n ; \quad \forall x \neq 0: \quad  x^\top Ax > 0$
+
+Норма Фробениуса для матрицы $A \in \mathbb{R}^{n \times n}$ определяется как $||A||_F = \sqrt{\sum_{i=1}^n \sum_{j=1}^n A^2_{ij}}$
+
+Для матриц скалярное произведение определено как $\langle X, Y \rangle := \text{Tr}(X^\top Y)$
+
+\begin{enumerate}[label=\textbf{Задача \arabic*.}]
+
+    \item Пусть $f$ -- одна из следующих функций:
+    \begin{enumerate}
+        \item (1 балл) $f : E \to \R$ -- функция $f(t) := \det(A - t I_n)$, где $A \in \R^{n \times n}$, $E := \{ t \in \R : \det(A - t I_n) \neq 0 \}$.
+        \item (1.5 балла) $f : \R_{++} \to \R$ -- функция $f(t) := \| (A + t I_n)^{-1} b \|^2$, где $A \in \St^n_{++}$, $b \in \R^n$.
+    \end{enumerate}
+    Для каждого из указанных вариантов вычислите первую и вторую производные $f'(t)$ и $f''(t)$.
+
+    \item Пусть $f$ -- одна из следующих функций:
+    \begin{enumerate}
+        \item (2 балла) $f : \R^n \to \R$ -- функция $\displaystyle f(x) := \frac{1}{2} \| x x^T - A \|_F^2$, где $A \in \St^n$.
+        \item (2.5 балла) $f : \R^n \setminus \{ 0 \} \to \R$ -- функция $\displaystyle f(x) := \langle x, x \rangle^{\langle x, x \rangle}$.
+    \end{enumerate}
+    Для каждого из указанных вариантов вычислите градиент $\nabla f$ и гессиан $\nabla^2 f$ (относительно стандартного скалярного произведения в пространстве $\R^n$).
+
+    \item Для каждой из следующих функций $f$ покажите, что вторая производная $d^2 f$ является знакоопределенной (как квадратичная форма) и установите ее знак:
+    \begin{enumerate}
+        \item (3 балла) $f : \St^n_{++} \to \R$ -- функция $f(X) := \langle X^{-1}, A \rangle$, где $A \in \St^n_+$.
+    \end{enumerate}
+        
+\end{enumerate}
+
+
+\section{Домашнее задание 1, дополнительная часть}
+
+\begin{center}
+    \textbf{Deadline - 20.09.2024 в 23:59}
+\end{center}
+
+
+В этой части используется следующие обозначения:
+
+$\mathbb{R}_{++}$ - положительные вещественные числа
+
+$A \in \mathbb{S}^n \quad\Longleftrightarrow \quad A= A^\top$
+
+$A \in \mathbb{S}^n_{++}\quad \Longleftrightarrow \quad A \in \mathbb{S}^n ; \quad \forall x \neq 0: \quad  x^\top Ax > 0$
+
+Норма Фробениуса для матрицы $A \in \mathbb{R}^{n \times n}$ определяется как $||A||_F = \sqrt{\sum_{i=1}^n \sum_{j=1}^n A^2_{ij}}$
+
+\begin{enumerate}[label=\textbf{Задача \arabic*.}]
+
+   \item Пусть $f$ -- одна из следующих функций:
+    \begin{enumerate}
+        \item (1.5 балл) $f : \R^n \to \R$ -- функция $\displaystyle f(x) := \frac{1}{2} \sum\limits_{i=1}^n\sum\limits_{j=1}^nx_ix_j$
+        \item (1.5 балла)$f : \R^n \setminus \{ 0 \} \to \R$ -- функция $\displaystyle f(x) := \frac{\langle A x, x \rangle}{ \|x\|^2 }$, где $A \in \St^n$.
+        \item (2 балла) $f: \R^n \to \R$ -- функция $f(x) := \ln(\sum_{i=1}^m e^{\langle a_i, x \rangle})$, где $a_1, \dots, a_m \in \R^n$. 
+        Эта функция называется \href{https://en.wikipedia.org/wiki/LogSumExp}{LogSumExp}, и она используется для гладкого приближения $\max(Ax)$. Подумайте, почему так. Также см. функцию softmax с семинара.
+    \end{enumerate}
+    Для каждого из указанных вариантов вычислите градиент $\nabla f$ и гессиан $\nabla^2 f$ (относительно стандартного скалярного произведения в пространстве $\R^n$).
+
+    \item Для каждой из следующих функций $f$ покажите, что вторая производная $d^2 f$ является знакоопределенной (как квадратичная форма) и установите ее знак:
+    \begin{enumerate}
+        \item (2 балла)$f : \R^n_{++} \to \R$ -- функция $f(x) := \prod_{i=1}^n x_i^{\alpha_i}$, где $\alpha_1, \dots, \alpha_n \geq 0$, $\sum_{i=1}^n \alpha_i = 1$. (\emph{Hint}: log derivative trick)
+        \item (2 балл)$f : \R^n_{++} \to \R$ -- функция $f(x) := \left( \sum_{i=1}^n x_i^p \right)^{1/p}$, где $p < 1$, $p \neq 0$.
+        \item (1 балла)$f : \St^n_{++} \to \R$ -- функция $f(X) := (\det(X))^{1/n}$.
+    \end{enumerate}
+    (\emph{Hint}: В некоторых пунктах могут оказаться полезными неравенства Коши--Буняковского и Йенсена.)
+        
+\end{enumerate}
+
+\end{document}
