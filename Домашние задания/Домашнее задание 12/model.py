@@ -407,7 +407,7 @@ def istft_from_mag_phase(pred_mag, noisy_phase, n_fft, hop_length, length):
 
 def trainer(num_epochs, batch_size, model_class, criterion, optimizer_class,
             optimizer_params, train_loader, test_loader, device='cuda' if torch.cuda.is_available() else 'cpu',
-            n_fft=512, hop_length=128, save_models=False, optimizer_name=None):
+            n_fft=512, hop_length=128, save_models=False, optimizer_name=None, test=False):
     """
     Функция для обучения модели.
 
@@ -470,6 +470,8 @@ def trainer(num_epochs, batch_size, model_class, criterion, optimizer_class,
 
             avg_loss = epoch_loss / total_batches
             train_bar.set_postfix(train_loss=f"{avg_loss:.4f}")
+            if test:
+                break
 
         return epoch_loss / len(train_loader)
 
@@ -524,6 +526,8 @@ def trainer(num_epochs, batch_size, model_class, criterion, optimizer_class,
                 avg_loss = epoch_loss / (test_bar.n + 1)
                 avg_snr = sum(test_snr[-test_bar.n-1:]) / (test_bar.n + 1)
                 test_bar.set_postfix(test_loss=f"{avg_loss:.4f}", SNR=f"{avg_snr:.2f}")
+                if test:
+                    break
 
         test_loss = epoch_loss / len(test_loader)
         test_snr_val = sum(test_snr[-len(test_loader):]) / len(test_loader)
