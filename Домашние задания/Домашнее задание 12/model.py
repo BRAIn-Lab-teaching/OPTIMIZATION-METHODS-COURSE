@@ -292,7 +292,7 @@ class UNetSpectrogramDenoiser(nn.Module):
         return out.squeeze(1)
 
 
-def compute_snr(clean: np.ndarray, enhanced: np.ndarray, eps: float = 1e-8) -> float:
+def compute_snr(clean, enhanced, eps=1e-8):
     """
     Вычисляет SNR (Signal-to-Noise Ratio) между сигналами.
 
@@ -307,7 +307,7 @@ def compute_snr(clean: np.ndarray, enhanced: np.ndarray, eps: float = 1e-8) -> f
     noise = clean - enhanced
     return 10 * np.log10(np.sum(clean**2) / (np.sum(noise**2) + eps)
 
-def compute_si_sdr(clean: np.ndarray, enhanced: np.ndarray, eps: float = 1e-8) -> float:
+def compute_si_sdr(clean, enhanced, eps=1e-8):
     """
     Вычисляет SI-SDR (Scale-Invariant Signal-to-Distortion Ratio).
 
