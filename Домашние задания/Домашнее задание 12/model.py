@@ -305,7 +305,7 @@ def compute_snr(clean, enhanced, eps=1e-8):
         SNR (float): Значение SNR в децибелах
     """
     noise = clean - enhanced
-    return 10 * np.log10(np.sum(clean**2) / (np.sum(noise**2) + eps)
+    return 10 * np.log10(np.sum(clean**2) / (np.sum(noise**2) + eps))
 
 def compute_si_sdr(clean, enhanced, eps=1e-8):
     """
@@ -323,7 +323,7 @@ def compute_si_sdr(clean, enhanced, eps=1e-8):
     scale = np.sum(clean * enhanced) / ref_energy
     scaled_clean = scale * clean
     noise = scaled_clean - enhanced
-    return 10 * np.log10(np.sum(scaled_clean**2) / (np.sum(noise**2) + eps)
+    return 10 * np.log10(np.sum(scaled_clean**2) / (np.sum(noise**2) + eps))
 
 def compute_segment_len(T8, n_fft, hop_length):
     """
