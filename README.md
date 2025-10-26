@@ -4,6 +4,12 @@
 
 ---
 
+## Полезные материалы
+
+- [Результаты](https://docs.google.com/spreadsheets/d/1TvIfuNutsYTcC5hMgOe5YvgQTzBG4KkbjbxNJWObaYU/edit?usp=sharing)
+
+---
+
 ## Лекционные материалы
 
 | Неделя | Тема | Материал | YouTube | VK |
