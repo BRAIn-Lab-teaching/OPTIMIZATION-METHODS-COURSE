@@ -407,7 +407,7 @@ def istft_from_mag_phase(pred_mag, noisy_phase, n_fft, hop_length, length):
 
 def trainer(num_epochs, batch_size, model_class, criterion, optimizer_class,
             optimizer_params, train_loader, test_loader, device='cuda' if torch.cuda.is_available() else 'cpu',
-            n_fft=512, hop_length=128, save_models=False, optimizer_name=None, test=False):
+            n_fft=512, hop_length=128, save_models=False, optimizer_name=None, test_on_one_batch=False):
     """
     Функция для обучения модели.
 
@@ -425,6 +425,7 @@ def trainer(num_epochs, batch_size, model_class, criterion, optimizer_class,
         hop_length (int): Шаг между окнами
         save_models (bool): Флаг сохранения моделей
         optimizer_name (str): Имя оптимизатора (для сохранения)
+        test_on_one_batch (bool): Флаг обучения на одном батче
 
     Возвращает:
         loss (tuple): (train_losses, test_losses, test_snr, test_si_sdr, model)
@@ -470,7 +471,7 @@ def trainer(num_epochs, batch_size, model_class, criterion, optimizer_class,
 
             avg_loss = epoch_loss / total_batches
             train_bar.set_postfix(train_loss=f"{avg_loss:.4f}")
-            if test:
+            if test_on_one_batch:
                 break
 
         return epoch_loss / len(train_loader)
