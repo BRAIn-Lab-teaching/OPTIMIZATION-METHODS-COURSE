@@ -527,7 +527,7 @@ def trainer(num_epochs, batch_size, model_class, criterion, optimizer_class,
                 avg_loss = epoch_loss / (test_bar.n + 1)
                 avg_snr = sum(test_snr[-test_bar.n-1:]) / (test_bar.n + 1)
                 test_bar.set_postfix(test_loss=f"{avg_loss:.4f}", SNR=f"{avg_snr:.2f}")
-                if test:
+                if test_on_one_batch:
                     break
 
         test_loss = epoch_loss / len(test_loader)
