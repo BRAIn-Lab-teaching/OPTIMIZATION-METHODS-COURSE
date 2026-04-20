@@ -10,6 +10,7 @@
 - [Программа](Программа.pdf)
 - [Результаты](https://docs.google.com/spreadsheets/d/13k5M-3jP7otRQ2OGE6Tx8aHHYxfUN3ePLYtRtaGQJ2Y/edit?usp=sharing)
 - [Пособие](Пособие.pdf)
+- [Программа коллока](Коллок.pdf)
 
 ---
 
