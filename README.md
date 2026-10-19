@@ -42,9 +42,9 @@
 | 1     | Пререквизиты из линейной алгебры | [Конспект](Семинары/Семинар%201/Семинар%201.pdf) | [Запись](https://youtu.be/pBCC5ptHxFc?si=hirXW-kIwdMkmvAL) | [Запись](https://rutube.ru/video/d74d3381dd8b51fc6d94e38b2396ab9d/?r=wd) |
 | 2 - 3 | Матрично-векторное дифференцирование. Теория | [Конспект](Семинары/Семинар%202-3/Семинар%202-3.pdf) | [Запись](https://youtu.be/6iZtyNhRudQ?si=GesBibNhVg2IZULu) <br> [Запись](https://youtu.be/9IFuA87CqAA?si=eb8TMlF7Tv7hECN1) | [Запись](https://rutube.ru/video/8137b0e769f678a20cb41cfccdfccab4/?r=wd) <br> [Запись](https://rutube.ru/video/76395515a58d680e0c47bf17a9204163/?r=wd) |
 | 4     | Матрично-векторное дифференцирование. Практика | [Notebook](Семинары/Семинар%204/Семинар%204.ipynb) | [Запись](https://youtu.be/ReTWjBifwWQ?si=B8tA_P6FR90OGNf7) | [Запись](https://rutube.ru/video/d74d3381dd8b51fc6d94e38b2396ab9d/?r=wd) | 
-| 5     | Классы множеств | [Конспект](Семинары/Семинар%205/Семинар%205.pdf) | [Запись](https://youtu.be/TzBF7xyfqZA?si=bTculCYa6GOok8-B) | | 
-| 6     | Выпуклые функции | [Конспект](Семинары/Семинар%206/Семинар%206.pdf) | [Запись](https://youtu.be/lZChx2hgrIY?si=tyCzTaBC5LSCxCYG) | | 
-| 7     | Субдифференциал и субградиент | [Конспект](Семинары/Семинар%207/Семинар%207.pdf) | [Запись](https://youtu.be/TF_TDMkVLZ4?si=pZEtd5VQgh0vSf32) | | 
+| 5     | Классы множеств | [Конспект](Семинары/Семинар%205/Семинар%205.pdf) | [Запись](https://youtu.be/TzBF7xyfqZA?si=bTculCYa6GOok8-B) | [Запись](https://rutube.ru/video/81e7d7c6d59b83b5f120453c5a641869/?r=wd) | 
+| 6     | Выпуклые функции | [Конспект](Семинары/Семинар%206/Семинар%206.pdf) | [Запись](https://youtu.be/lZChx2hgrIY?si=tyCzTaBC5LSCxCYG) | [Запись](https://rutube.ru/video/aa60a8235811dc1642b6bf73b840f036/?r=wd) | 
+| 7     | Субдифференциал и субградиент | [Конспект](Семинары/Семинар%207/Семинар%207.pdf) | [Запись](https://youtu.be/TF_TDMkVLZ4?si=pZEtd5VQgh0vSf32) | [Запись](https://rutube.ru/video/f6d8755aaff5c13afdb47cdbc36b4dad/?r=wd) | 
 | 8     | Сопряжённые функции Фенхеля |  | | | 
 | 9     | Двойственность по Лагранжу |  | | | 
 | 10    | Условия оптимальности Каруша—Куна—Таккера |  | | | 
