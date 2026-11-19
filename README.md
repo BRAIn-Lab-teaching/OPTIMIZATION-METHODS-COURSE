@@ -10,6 +10,8 @@
 - [Программа](Программа.pdf)
 - [Результаты](https://docs.google.com/spreadsheets/d/1KWD6_d5-Ap4JPis9gAl3G927dYv2iSVGlLuHYkBcQkM/edit?usp=sharing)
 - [Пособие](Пособие.pdf)
+- [Демо вариант](Демо%20вариант/ДемоВариант.pdf)
+- [Решения демо варианта](Демо%20вариант/РЕШЕНИЯ_ДемоВариант.pdf)
 
 ---
 
