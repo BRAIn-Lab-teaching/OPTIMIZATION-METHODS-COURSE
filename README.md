@@ -8,6 +8,7 @@
 
 - [Правила игры](Правила%20игры.pdf)
 - [Программа](Программа.pdf)
+- [Программа](Программа%20коллоквиума.pdf)
 - [Результаты](https://docs.google.com/spreadsheets/d/18m0RmMYaw_fn7Wqs4QS7HKGZ1Q79ByY6x4PjFF4ndMQ/edit?usp=sharing)
 - [Пособие](Пособие.pdf)
 - [Демо вариант](Демо%20вариант/ДемоВариант.pdf)
